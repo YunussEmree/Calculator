@@ -1,2 +1,2 @@
 # Calculator
-Basic calculator with kotlin
+Basic calculator mobile app with java
