@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etFirst"
+        android:layout_width="234dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Number 1"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/etSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etSecond"
+        android:layout_width="234dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="Number 2"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFirst" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="124dp"
+        android:text="Result: 0"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="46dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSecond">
+
+        <Button
+            android:id="@+id/btnSum"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:onClick="Sum"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btndeduct"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:onClick="Deduct"
+            android:layout_marginLeft="10dp"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnmultiply"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:onClick="Multiply"
+            android:layout_marginLeft="10dp"
+            android:text="x" />
+
+        <Button
+            android:id="@+id/btndivide"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:onClick="Divide"
+            android:layout_marginLeft="10dp"
+            android:text="/" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
